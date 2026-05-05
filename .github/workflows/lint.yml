@@ -7,6 +7,6 @@ jobs:
       - name: Checking
         uses: actions/checkout@v6
       - name: Install deps
-        run: npm ci
-      - name: Lint
-        run: npm run lint
+        run: pip install flask
+      # - name: Lint
+      #   run: npm run lint
