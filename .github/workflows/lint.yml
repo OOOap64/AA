@@ -12,10 +12,16 @@ jobs:
       #   run: npm run lint
   test:
     needs: [lint]
+    strategy:
+      matrix: 
+        version: ["3.11", "3.12", "3.13"]
     runs-on: ubuntu-latest
     steps:
       - name: Checking
         uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with:
+            python-version: ${{  matrix.version}}
       - name: Install deps
         run: pip install flask pylint pytest
       
