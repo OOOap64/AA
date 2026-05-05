@@ -7,6 +7,15 @@ jobs:
       - name: Checking
         uses: actions/checkout@v6
       - name: Install deps
-        run: pip install flask
+        run: pip install flask pylint pytest
       # - name: Lint
       #   run: npm run lint
+test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking
+        uses: actions/checkout@v6
+      - name: Install deps
+        run: pip install flask pylint pytest
+      
+      
