@@ -24,5 +24,8 @@ jobs:
             python-version: ${{  matrix.version}}
       - name: Install deps
         run: pip install flask pylint pytest
-      
-      
+  secrets:
+    runs-on: ubuntu latest 
+    steps:
+      - name: Print secret
+        run: echo ${{ secrets.TEST }}
