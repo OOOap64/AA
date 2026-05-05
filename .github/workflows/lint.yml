@@ -10,7 +10,7 @@ jobs:
         run: pip install flask pylint pytest
       # - name: Lint
       #   run: npm run lint
-test:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checking
